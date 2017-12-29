@@ -16,11 +16,6 @@ pipeline {
         isUnix()
       }
     }
-    stage('step4') {
-      steps {
-        timestamps()
-      }
-    }
     stage('finish') {
       steps {
         echo 'This is the end'
