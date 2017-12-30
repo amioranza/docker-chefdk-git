@@ -4,6 +4,7 @@ pipeline {
     stage('step1') {
       steps {
         echo 'Starting the pipeline'
+        input(message: 'Deseja continuar?', ok: '1', id: '0')
       }
     }
     stage('step2') {
@@ -23,7 +24,7 @@ pipeline {
             echo 'This is the end'
           }
         }
-        stage('') {
+        stage('error') {
           steps {
             sh 'echo $VERSION'
           }
