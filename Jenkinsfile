@@ -8,7 +8,7 @@ pipeline {
     }
     stage('step2') {
       steps {
-        pwd(tmp: true)
+        sh 'export VERSION=3'
       }
     }
     stage('step3') {
