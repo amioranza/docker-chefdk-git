@@ -17,8 +17,17 @@ pipeline {
       }
     }
     stage('finish') {
-      steps {
-        echo 'This is the end'
+      parallel {
+        stage('finish') {
+          steps {
+            echo 'This is the end'
+          }
+        }
+        stage('') {
+          steps {
+            sh 'echo $VERSION'
+          }
+        }
       }
     }
   }
