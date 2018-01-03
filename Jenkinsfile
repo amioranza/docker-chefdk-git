@@ -4,7 +4,7 @@ pipeline {
     stage('step1') {
       steps {
         echo 'Starting the pipeline'
-        input(message: 'Deseja continuar?', ok: '1', id: '0')
+        input 'Deseja continuar?'
       }
     }
     stage('step2') {
